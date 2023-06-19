@@ -1,15 +1,13 @@
 import { Box } from "@chakra-ui/react";
-import Navbar from "./Components/Navbar";
 import AllRoutes from "./Pages/AllRoutes";
-import Footer from "./Components/Footer";
+import "../src/Styles/Comman.css";
+
 
 function App() {
   return (
     <Box>
       <div style={{padding: '50px'}}>
-      {/* <Navbar id="top" /> */}
-      <AllRoutes />
-      {/* <Footer /> */}
+        <AllRoutes />
       </div>
     </Box>
   );

@@ -1,10 +1,4 @@
 import React, { useEffect, useState } from "react";
-import {
-  AiOutlineGoogle,
-  AiOutlineTwitter,
-  AiFillFacebook,
-  AiFillGithub,
-} from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { backend_url } from "./BackendURL";
 import {
@@ -34,7 +28,6 @@ const Login = () => {
 
   const handleClick = () => setShow(!show);
 
-  /*google login*/
   const handleCallbackResponse = (response) => {
     console.log(response);
     var userObject = jwt_decode(response.credential);
@@ -106,7 +99,6 @@ const Login = () => {
             isClosable: true,
           });
           navigate("/");
-          // navigate("/");
         }
       }
       console.log(formData);
@@ -141,7 +133,6 @@ const Login = () => {
       >
         Sign in to your account
       </Heading>
-      {/* <Text mb={["20px", '20px', '15px']}>to enjoy all of our cool features ✌️</Text> */}
       <form onSubmit={onSubmit} style={{ textAlign: "center" }}>
         <Box className="input-icons">
           <i className="fa fa-user icon"></i>
@@ -200,7 +191,6 @@ const Login = () => {
           value={"Sign in"}
         />
       </form>
-      {/* <p style={{ marginTop: "14px" }}>or continue with these social profile</p> */}
       <Box
         display={"flex"}
         justifyContent={"center"}
@@ -210,42 +200,6 @@ const Login = () => {
       >
         <Box id="signInDiv" style={{ marginTop: "14px" }}></Box>
       </Box>
-      {/* <Box
-        m="0px 0 8px 0"
-        display={"flex"}
-        justifyContent="center"
-        alignItems={"center"}
-        gap="5px"
-      >
-        <a
-          className="social-icon"
-          target={"_blank"}
-          href="https://github.com/topics/bug-tracker"
-        >
-          <AiOutlineGoogle />
-        </a>
-        <a
-          className="social-icon"
-          target={"_blank"}
-          href="https://github.com/topics/bug-tracker"
-        >
-          <AiFillFacebook />{" "}
-        </a>
-        <a
-          className="social-icon"
-          target={"_blank"}
-          href="https://github.com/topics/bug-tracker"
-        >
-          <AiOutlineTwitter />{" "}
-        </a>
-        <a
-          className="social-icon"
-          target={"_blank"}
-          href="https://github.com/topics/bug-tracker"
-        >
-          <AiFillGithub />
-        </a>
-      </Box> */}
       <p>
         Cerate an account?{" "}
         <Link

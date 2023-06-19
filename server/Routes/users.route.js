@@ -12,7 +12,7 @@ userRouter.post('/register', async (req, res) => {
     try {
         bcrypt.hash(password, +(process.env.Salt_rounds), async (err, secure_password) => {
             if (err) {
-                console.log("line 14: ", err);
+                console.log(err);
             } else {
                 const user = new UserModel({ name, password: secure_password });
                 console.log(user);
@@ -27,7 +27,6 @@ userRouter.post('/register', async (req, res) => {
 
 //end points: "/users/login" for login the registered user;
 userRouter.post('/login', async (req, res) => {
-    // console.log("line 28: ", req);
     const { name, password } = req.body;
 
     try {

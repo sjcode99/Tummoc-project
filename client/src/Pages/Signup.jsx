@@ -6,16 +6,9 @@ import {
   Input,
   InputGroup,
   InputRightElement,
-  Text,
   useToast,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import {
-  AiOutlineGoogle,
-  AiOutlineTwitter,
-  AiFillFacebook,
-  AiFillGithub,
-} from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { backend_url } from "./BackendURL";
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
@@ -91,7 +84,6 @@ const Signup = () => {
       <Heading mb="10px" fontSize={["22px", "22px", "26px"]} p="20px">
         Sign up
       </Heading>
-      {/* <Text mb={["20px", '20px', '15px']}>to enjoy all of our cool features ✌️</Text> */}
       <Container>
         <form onSubmit={onSubmit}>
           <Box className="input-icons">
@@ -151,43 +143,6 @@ const Signup = () => {
           />
         </form>
       </Container>
-      {/* <Text mt="30px">or continue with these social profiles</Text> */}
-      {/* <Box
-        m="8px 0"
-        display={"flex"}
-        justifyContent="center"
-        alignItems={"center"}
-        gap="5px"
-      >
-        <a
-          className="social-icon"
-          target={"_blank"}
-          href="https://github.com/topics/bug-tracker"
-        >
-          <AiOutlineGoogle />
-        </a>
-        <a
-          className="social-icon"
-          target={"_blank"}
-          href="https://github.com/topics/bug-tracker"
-        >
-          <AiFillFacebook />{" "}
-        </a>
-        <a
-          className="social-icon"
-          target={"_blank"}
-          href="https://github.com/topics/bug-tracker"
-        >
-          <AiOutlineTwitter />{" "}
-        </a>
-        <a
-          className="social-icon"
-          target={"_blank"}
-          href="https://github.com/topics/bug-tracker"
-        >
-          <AiFillGithub />
-        </a>
-      </Box> */}
       <p style={{margin: "30px"}}>
         Already a member?{" "}
         <Link style={{ textDecoration: "none", color: "green" }} to={"/login"}>
