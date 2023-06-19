@@ -110,7 +110,6 @@ const Signup = () => {
                 className="input-field"
                 value={password}
                 name="password"
-                // pr="4rem"
                 type={show ? "text" : "password"}
                 placeholder="Enter Password*"
                 onChange={handleChange}
@@ -118,7 +117,6 @@ const Signup = () => {
               />
               <InputRightElement >
                 <Button
-                  // variant={"outline"}
                   h="1.75rem"
                   size="sm"
                   onClick={handleClick}

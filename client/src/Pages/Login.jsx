@@ -131,7 +131,7 @@ const Login = () => {
         style={{ textAlign: "center", padding: "20px" }}
         fontSize={["22px", "22px", "26px"]}
       >
-        Sign in to your account
+        Sign in 
       </Heading>
       <form onSubmit={onSubmit} style={{ textAlign: "center" }}>
         <Box className="input-icons">
